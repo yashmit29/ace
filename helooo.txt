@@ -1,1 +1,91 @@
-hellooo
+prg 1 
+git --version mkdir 
+project-demo
+cd project-demo
+git init
+git branch -M master
+echo "This is a sample file" > sample.txt
+ls 
+cat sample.txt 
+git status 
+git add sample.txt 
+git status 
+git commit -m "Initial commit: added sample.txt" 
+git status 
+git log --oneline 
+git ls-files 
+git show HEAD
+
+
+prg 2 
+git --version 
+mkdir program2 
+cd program2 
+git init 
+git branch -M master 
+echo "Initial project content" > sample.txt 
+git add sample.txt 
+git commit -m "Initial commit" 
+git branch feature-branch 
+git branch 
+git checkout feature-branch echo "This is a new feature" > feature.txt 
+git status 
+git add feature.txt 
+git commit -m "Add feature.txt" 
+git log --oneline --graph --all
+git checkout master 
+git merge feature-branch 
+ls 
+git branch --merged 
+git log --oneline --graph --all 
+git status
+
+
+prg 3
+git --version
+mkdir program3
+cd program3
+git init
+git branch -M master
+echo "This is the original content" > sample.txt
+cat sample.txt
+git add sample.txt
+git status
+git commit -m "Initial commit"
+git branch feature-branch
+git branch
+echo "This is my new uncommitted change" >> sample.txt
+cat sample.txt
+git status
+git stash
+git stash list
+git status
+git checkout feature-branch
+git branch
+git checkout master
+git stash apply
+cat sample.txt
+git status
+git stash list
+
+prg 4
+git clone https://github.com/YOUR-USERNAME/Hello-World.git 
+cd Hello-World
+
+prg5
+git checkout master
+echo "Local student changes" > student.txt
+git add student.txt
+git commit -m "Add student file"
+# [On GitHub: create and commit teacher.txt to master]
+git fetch origin
+git rebase origin/master
+
+prg6 
+
+git checkout -b feature-branch
+echo "New feature" > feature.txt
+git add feature.txt
+git commit -m "Add new feature"
+git checkout master
+git merge --no-ff feature-branch -m "Merge feature branch into master"
